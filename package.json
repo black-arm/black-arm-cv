@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.6",
@@ -26,7 +27,12 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "commitlint": "^17.7.2",
+    "cypress": "^13.3.0",
     "daisyui": "^3.8.3",
+    "husky": "^8.0.3",
     "prettier": "3.0.3"
   }
 }
