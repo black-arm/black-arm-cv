@@ -1,23 +1,19 @@
-import Image from "next/image"
+import Image from "next/image";
 import { useState } from "react";
 
 export function Navbar() {
 
     const [isDarkMode, setDarkMode] = useState(false);
-    const [isDropdown, setDropdown] = useState(false);
 
-    function onClickButtons($event: React.MouseEvent<HTMLElement>){
+
+    function changeTheme($event: React.MouseEvent<HTMLElement>){
         $event.stopPropagation();
-        $event.currentTarget.id === 'darkModeButton' ? changeTheme() : setDropdown(!isDropdown)
-    }
-
-    function changeTheme(){
         if(localStorage.getItem('theme') === 'dark' || !('theme' in localStorage)){
-            setTheme('light')
-            setDarkMode(false)
+            setTheme('light');
+            setDarkMode(false);
         } else {
-            setTheme('dark')
-            setDarkMode(true)
+            setTheme('dark');
+            setDarkMode(true);
         }
 
     }
@@ -43,12 +39,12 @@ export function Navbar() {
                 role="button" 
                 data-testid="darkModeButton" 
                 className="btn btn-ghost" 
-                onClick={onClickButtons}
+                onClick={changeTheme}
             >
                 {isDarkMode ? darkSvg: lightSvg}
            </button>
            <div className="dropdown dropdown-end sm:hidden">
-                <label onClick={onClickButtons} tabIndex={0} className="btn btn-ghost btn-circle" >
+                <label tabIndex={0} className="btn btn-ghost btn-circle" >
                     { menuIcon }
                 </label>
                 <div className="dropdown-content card card-compact w-screen h-[90vh] bg-base-200">
@@ -60,7 +56,7 @@ export function Navbar() {
                 </div>
            </div>
         </div>
-    </div>
+    </div>;
 }
 
 const lightSvg = <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="fill-accent-content">
@@ -69,7 +65,7 @@ const lightSvg = <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 
         0-70-72 56-56 72 70-58 58ZM212-692l-72-70 58-58 70 72-56 56Zm268 452q-100 0-170-70t-70-170q0-100 
         70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q67 0 113.5-46.5T640-480q0-67-46.5-113.5T480-640q-67 
         0-113.5 46.5T320-480q0 67 46.5 113.5T480-320Zm0-160Z"/>
-    </svg>
+    </svg>;
 
 const darkSvg = <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -80,7 +76,7 @@ const darkSvg = <svg
 >
     <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 
     0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
-</svg>
+</svg>;
 
 const menuIcon = <svg xmlns="http://www.w3.org/2000/svg" 
     height="24" 
@@ -89,9 +85,9 @@ const menuIcon = <svg xmlns="http://www.w3.org/2000/svg"
     className="fill-accent-content"
 >
     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-</svg>
+</svg>;
 
 function setTheme(theme: 'light' | 'dark'){
-    document.documentElement.dataset.theme = theme
-    localStorage.theme = theme
+    document.documentElement.dataset.theme = theme;
+    localStorage.theme = theme;
 }

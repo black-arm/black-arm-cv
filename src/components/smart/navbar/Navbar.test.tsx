@@ -6,21 +6,21 @@ import React from "react";
 describe('<Navbar />', () => {
 
     test('should render', () => {
-        render(<Navbar />)
+        render(<Navbar />);
         const navbar = screen.getByTestId('navbar');
         expect(navbar).exist;
-    })
+    });
 
     test('should have navbar class', () => {
-        render(<Navbar />)
-        const navbar = screen.getByTestId('navbar')
+        render(<Navbar />);
+        const navbar = screen.getByTestId('navbar');
         expect(navbar.className.includes('navbar')).true;
-    })
+    });
 
     test('should have light and dark icon', () => {
-        render(<Navbar />)
+        render(<Navbar />);
         const darkModeButton = screen.getByTestId('darkModeButton');
         expect(darkModeButton).exist;
         
-    })
-})
+    });
+});
