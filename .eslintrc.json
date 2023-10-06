@@ -1,9 +1,16 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:cypress/recommended"
+  ],
   "globals": {
     "React": "readonly"
   },
-  "ignorePatterns": [".prettierrc"],
+  "ignorePatterns": [
+    ".prettierrc"
+  ],
   "rules": {
     "semi": "error",
     "no-debugger": "error",
