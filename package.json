@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "test": "vitest",
+    "cypress:run": "cypress run --component",
     "cypress": "cypress open"
   },
   "dependencies": {
