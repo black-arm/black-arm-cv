@@ -7,6 +7,7 @@ export function SectionInfo({ title, info, image}: { title: string, info: string
     return <div className="hero min-h-screen">
     <div className="hero-content flex-col lg:flex-row-reverse">
         <Fade direction="right" delay={500}>
+            {/*eslint-disable-next-line @next/next/no-img-element*/}
             <img data-testid="profileImage" src={image} className=" lg:max-w-sm rounded-lg shadow-2xl" alt="image"/>
         </Fade>
         <Fade direction="left">
