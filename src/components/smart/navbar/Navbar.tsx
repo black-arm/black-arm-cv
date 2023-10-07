@@ -1,21 +1,27 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
 
     const [isDarkMode, setDarkMode] = useState(false);
 
+    useEffect(() => {
+        changeTheme();
+    }, []);
 
-    function changeTheme($event: React.MouseEvent<HTMLElement>){
-        $event.stopPropagation();
-        if(localStorage.getItem('theme') === 'dark' || !('theme' in localStorage)){
-            setTheme('light');
-            setDarkMode(false);
-        } else {
+    function changeTheme(){
+        if(localStorage.theme !== 'dark'){
             setTheme('dark');
             setDarkMode(true);
+        } else {
+            setTheme('light');
+            setDarkMode(false);
         }
+    }
 
+    function darkModeButtonOnClick($event: React.MouseEvent<HTMLElement>){
+        $event.stopPropagation();
+        changeTheme();
     }
 
     return <div data-testid="navbar" className="navbar bg-base-200">
@@ -39,7 +45,7 @@ export function Navbar() {
                 role="button" 
                 data-testid="darkModeButton" 
                 className="btn btn-ghost" 
-                onClick={changeTheme}
+                onClick={darkModeButtonOnClick}
             >
                 {isDarkMode ? darkSvg: lightSvg}
            </button>
@@ -48,7 +54,7 @@ export function Navbar() {
                     { menuIcon }
                 </label>
                 <div className="dropdown-content card card-compact w-screen h-[90vh] bg-base-200">
-                    <ul tabIndex={0} className="menu menu-sm">
+                    <ul tabIndex={0} className="menu menu-xl">
                         <li className="p-2"><a>Home</a></li>
                         <li className="p-2"><a>Progetti</a></li>
                         <li className="p-2"><a>Articoli</a></li>
