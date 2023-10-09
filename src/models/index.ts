@@ -1,4 +1,6 @@
 
-import { SectionSkillsProps } from './section-skills-props';
+import { Skills } from './skills';
+import { Info } from './info';
+import { Portfolio } from './portfolio';
 
-export type { SectionSkillsProps };
+export type { Skills, Info, Portfolio };

@@ -1,12 +1,12 @@
 import { ReactElement } from "react";
 
-export interface SectionSkillsProps {
+export interface Skills {
     title: string;
     skillsText: string[];
-    skills: Skill[];
+    techIcons: TechIcon[];
 }
 
-export interface Skill {
-    skillName: string;
+export interface TechIcon {
+    iconName: string;
     icon: ReactElement<SVGElement>;
 }

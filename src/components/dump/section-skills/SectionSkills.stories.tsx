@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { SectionSkills } from "./SectionSkills";
-import { SectionSkillsProps } from "@/models";
+import { Skills } from "@/models";
 import { angularIcon, css3Icon, cypressJsIcon, gitIcon, html5Icon, javaIcon, javascriptIcon, nextJsIcon, ngRx, npmIcon, reactIcon, reduxIcon, typescriptIcon } from "../../globals/icons";
 
 const meta: Meta<typeof SectionSkills> = {
@@ -10,59 +10,59 @@ const meta: Meta<typeof SectionSkills> = {
 export default meta;
 type Story = StoryObj<typeof SectionSkills>;
 
-const sectionSkillsProps: SectionSkillsProps = {
+const sectionSkillsProps: Skills = {
     title: 'Cosa Faccio',
-    skills: [
+    techIcons: [
         {
-            skillName: 'HTML',
+            iconName: 'HTML',
             icon: html5Icon
         },
         {
-            skillName: 'CSS',
+            iconName: 'CSS',
             icon: css3Icon
         },
         {
-            skillName: 'Javascript',
+            iconName: 'Javascript',
             icon: javascriptIcon
         },
         {
-            skillName: 'Typescript',
+            iconName: 'Typescript',
             icon: typescriptIcon
         },
         {
-            skillName: 'Angular',
+            iconName: 'Angular',
             icon: angularIcon
         },
         {
-            skillName: 'NgRx',
+            iconName: 'NgRx',
             icon: ngRx
         },
         {
-            skillName: 'React',
+            iconName: 'React',
             icon: reactIcon
         },
         {
-            skillName: 'Java',
+            iconName: 'Java',
             icon: javaIcon
         },
         {
-            skillName: 'Next.js',
+            iconName: 'Next.js',
             icon: nextJsIcon
         }, 
         {
-            skillName: 'Cypress.js',
+            iconName: 'Cypress.js',
             icon: cypressJsIcon
         },
         {
-            skillName: 'git',
+            iconName: 'git',
             icon: gitIcon
         }, 
         {
-            skillName: 'npm',
+            iconName: 'npm',
             icon: npmIcon
         },
         {
-            skillName: 'redux',
+            iconName: 'redux',
             icon: reduxIcon
         }
     ],

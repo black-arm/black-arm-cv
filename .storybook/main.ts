@@ -1,7 +1,9 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  staticDirs: ['../public'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -20,7 +22,6 @@ const config: StorybookConfig = {
           {
               loader: require.resolve("css-loader"),
               options: {
-                  
                   importLoaders: 1,
               },
           },{
@@ -36,7 +37,9 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: '@storybook/nextjs',
-    options: {},
+    options: {
+      nextConfigPath: path.resolve(__dirname, '../next.config.js')
+    },
   },
   docs: {
     autodocs: 'tag',

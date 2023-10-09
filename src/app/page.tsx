@@ -1,7 +1,8 @@
+import { ExperiencesSection } from "@/components/dump/experiences-section/ExperiencesSection";
 import { SectionInfo } from "@/components/dump/section-info/SectionInfo";
 import { SectionSkills } from "@/components/dump/section-skills/SectionSkills";
 import { angularIcon, css3Icon, cypressJsIcon, gitIcon, html5Icon, javaIcon, javascriptIcon, nextJsIcon, ngRx, npmIcon, reactIcon, reduxIcon, typescriptIcon } from "@/components/globals/icons";
-import { SectionSkillsProps } from "@/models";
+import { Skills } from "@/models";
 
 const sectionInfo = {
   title: 'Hello World! Mi chiamo Antonio',
@@ -12,59 +13,59 @@ const sectionInfo = {
   image: '/images/profile.jpeg'
 };
 
-const sectionSkillsProps: SectionSkillsProps = {
+const sectionSkillsProps: Skills = {
   title: 'Cosa Faccio',
-  skills: [
+  techIcons: [
       {
-          skillName: 'HTML',
+          iconName: 'HTML',
           icon: html5Icon
       },
       {
-          skillName: 'CSS',
+          iconName: 'CSS',
           icon: css3Icon
       },
       {
-          skillName: 'Javascript',
+          iconName: 'Javascript',
           icon: javascriptIcon
       },
       {
-          skillName: 'Typescript',
+          iconName: 'Typescript',
           icon: typescriptIcon
       },
       {
-          skillName: 'Angular',
+          iconName: 'Angular',
           icon: angularIcon
       },
       {
-          skillName: 'NgRx',
+          iconName: 'NgRx',
           icon: ngRx
       },
       {
-          skillName: 'React',
+          iconName: 'React',
           icon: reactIcon
       },
       {
-          skillName: 'Java',
+          iconName: 'Java',
           icon: javaIcon
       },
       {
-          skillName: 'Next.js',
+          iconName: 'Next.js',
           icon: nextJsIcon
       }, 
       {
-          skillName: 'Cypress.js',
+          iconName: 'Cypress.js',
           icon: cypressJsIcon
       },
       {
-          skillName: 'git',
+          iconName: 'git',
           icon: gitIcon
       }, 
       {
-          skillName: 'npm',
+          iconName: 'npm',
           icon: npmIcon
       },
       {
-          skillName: 'redux',
+          iconName: 'redux',
           icon: reduxIcon
       }
   ],
@@ -78,6 +79,9 @@ export default function Home() {
     </section>
     <section>
       <SectionSkills {... sectionSkillsProps } />
+    </section>
+    <section>
+        <ExperiencesSection />
     </section>
   </>);
 }
