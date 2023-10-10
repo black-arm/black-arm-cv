@@ -11,7 +11,8 @@ type Story = StoryObj<typeof Card>;
 
 const info: Info = {
     title: 'Be gear',
-    info: 'Bla bla bla bla',
+    info: `Consulenza in un azienda in ambito banking. Qui ho lavorato su molteplici progetti e 
+        mi sono occupato di creare Batch in Java, sviluppi frontend con React e creazione di Rest API con Spring Boot`,
     image: 'images/begear.png'
 };
 
