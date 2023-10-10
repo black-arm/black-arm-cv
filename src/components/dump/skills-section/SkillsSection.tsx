@@ -1,9 +1,11 @@
 'use client';
 
-import { Skills } from "@/models";
+import { devPortfolio } from "../../../config/portfolio";
 import { Fade, Flip } from "react-awesome-reveal";
 
-export function SectionSkills({ title, techIcons, skillsText }: Skills) {
+export function SkillsSection() {
+
+    const { title, techIcons, skillsText } = devPortfolio.skills;
 
     return <>
         <div className="hero min-h-screen bg-base-200">

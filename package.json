@@ -9,10 +9,11 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "cypress:run": "cypress run --component",
+    "cypress:run": "cypress run",
     "cypress": "cypress open",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
@@ -42,8 +43,10 @@
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.4.6",
+    "@storybook/jest": "^0.2.3",
     "@storybook/nextjs": "^7.4.6",
     "@storybook/react": "^7.4.6",
+    "@storybook/test-runner": "^0.13.0",
     "@storybook/testing-library": "^0.2.2",
     "@testing-library/react": "^14.0.0",
     "commitlint": "^17.7.2",

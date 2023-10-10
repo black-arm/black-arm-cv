@@ -1,8 +1,11 @@
-//import Image from 'next/image';
 'use client';
+
+import { devPortfolio } from "../../../config/portfolio";
 import { Fade } from "react-awesome-reveal";
 
-export function SectionInfo({ title, info, image}: { title: string, info: string, image: string }){
+export function InfoSection(){
+
+    const { title, info, image } = devPortfolio.userInfo;
 
     return <div className="hero min-h-screen">
     <div className="hero-content flex-col lg:flex-row-reverse">

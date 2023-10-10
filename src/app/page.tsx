@@ -1,6 +1,6 @@
 import { ExperiencesSection } from "@/components/dump/experiences-section/ExperiencesSection";
-import { SectionInfo } from "@/components/dump/section-info/SectionInfo";
-import { SectionSkills } from "@/components/dump/section-skills/SectionSkills";
+import { InfoSection } from "@/components/dump/info-section/InfoSection";
+import { SkillsSection } from "@/components/dump/skills-section/SkillsSection";
 import { angularIcon, css3Icon, cypressJsIcon, gitIcon, html5Icon, javaIcon, javascriptIcon, nextJsIcon, ngRx, npmIcon, reactIcon, reduxIcon, typescriptIcon } from "@/components/globals/icons";
 import { Skills } from "@/models";
 
@@ -75,10 +75,10 @@ const sectionSkillsProps: Skills = {
 export default function Home() {
   return (<>
     <section>
-      <SectionInfo {...sectionInfo} />
+      <InfoSection {...sectionInfo} />
     </section>
     <section>
-      <SectionSkills {... sectionSkillsProps } />
+      <SkillsSection {... sectionSkillsProps } />
     </section>
     <section>
         <ExperiencesSection />
