@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -24,11 +23,6 @@ export function Navbar() {
 
     return <div data-testid="navbar" className="navbar bg-base-200">
         <div className="navbar-start">
-            <div className="avatar mr-2">
-                <div className="h-12 w-12 rounded">
-                    <Image width={24} height={24} src='/images/profile.jpeg' alt="profile Image" /> 
-                </div>
-            </div>
             <a className="btn btn-ghost">Antonio Basile</a>
         </div>
         <div className="navbar-center">
