@@ -51,7 +51,7 @@ export function Navbar() {
                 <label tabIndex={0} className="btn btn-ghost btn-circle" >
                     { menuIcon }
                 </label>
-                <div className="dropdown-content card card-compact w-screen h-[90vh] bg-base-200">
+                <div className="dropdown-content card card-compact w-screen z-10 bg-base-200">
                     <ul tabIndex={0} className="menu menu-xl">
                         <li className="p-2"><a>Home</a></li>
                         <li className="p-2"><a>Progetti</a></li>
