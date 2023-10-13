@@ -1,13 +1,17 @@
 
+export interface UserRepositories {
+    repositories: Repository[], 
+    repositoriesContributedTo: Repository[]
+}
 
 export interface Repository {
-    name: string
-    description: string,
+    nameWithOwner: string
+    description: string | null,
     forkCount: number,
-    homepageUrl: string,
+    homepageUrl: string | null,
     url: string,
     owner: Owner,
-    primaryLanguage: PrimaryLanguage
+    primaryLanguage: PrimaryLanguage | null
 }
 
 export interface Owner {

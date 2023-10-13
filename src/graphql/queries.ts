@@ -30,7 +30,7 @@ export const projectsQuery = `query($login: String!){
     user(login: $login){
         repositories(last: 100, isFork: false) {
             nodes {
-                name,
+                nameWithOwner,
                 description,
                 forkCount,
                 homepageUrl,
@@ -46,7 +46,7 @@ export const projectsQuery = `query($login: String!){
         }
         repositoriesContributedTo(last: 100) {
             nodes {
-                name,
+                nameWithOwner,
                 description,
                 forkCount,
                 homepageUrl,
