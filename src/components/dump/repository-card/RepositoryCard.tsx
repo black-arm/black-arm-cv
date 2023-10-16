@@ -13,7 +13,7 @@ export const RepositoryCard = ({
 
     const avatarUrl = owner.avatarUrl;
 
-    return <div data-testid="repoCard" className="card bg-base-200 h-full shadow-xl hover:shadow-sm">
+    return <div data-testid="repoCard" className="card bg-base-200 h-full shadow-xl hover:shadow-none m-2">
         <div className="card-body">
             <div className="card-title relative">
                 <div className="avatar">

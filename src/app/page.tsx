@@ -4,14 +4,12 @@ import { SkillsSection } from "@/components/dump/skills-section/SkillsSection";
 
 export default function Home() {
   return (<>
-    <section>
+    <section className="col-span-full">
       <InfoSection/>
     </section>
-    <section>
+    <section className="col-span-full">
       <SkillsSection />
     </section>
-    <section>
-        <ExperiencesSection />
-    </section>
+    <ExperiencesSection />
   </>);
 }
