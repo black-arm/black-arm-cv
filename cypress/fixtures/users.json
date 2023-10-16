@@ -1,0 +1,114 @@
+{
+    "data": {
+      "user": {
+        "repositories": {
+          "nodes": [
+            {
+              "nameWithOwner": "black-arm/black-arm",
+              "description": "Config files for my GitHub profile.",
+              "forkCount": 0,
+              "homepageUrl": "https://github.com/black-arm",
+              "url": "https://github.com/black-arm/black-arm",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/68558867?u=96daf7d66a10e74dba02785bba55e0f6352bc73e&v=4"
+              },
+              "primaryLanguage": null
+            },
+            {
+              "nameWithOwner": "black-arm/sprint-app",
+              "description": null,
+              "forkCount": 0,
+              "homepageUrl": null,
+              "url": "https://github.com/black-arm/sprint-app",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/68558867?u=96daf7d66a10e74dba02785bba55e0f6352bc73e&v=4"
+              },
+              "primaryLanguage": null
+            },
+            {
+              "nameWithOwner": "black-arm/nyt-movie-review",
+              "description": null,
+              "forkCount": 0,
+              "homepageUrl": null,
+              "url": "https://github.com/black-arm/nyt-movie-review",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/68558867?u=96daf7d66a10e74dba02785bba55e0f6352bc73e&v=4"
+              },
+              "primaryLanguage": {
+                "color": "#3178c6",
+                "name": "TypeScript"
+              }
+            },
+            {
+              "nameWithOwner": "black-arm/shoppy-app",
+              "description": null,
+              "forkCount": 0,
+              "homepageUrl": null,
+              "url": "https://github.com/black-arm/shoppy-app",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/68558867?u=96daf7d66a10e74dba02785bba55e0f6352bc73e&v=4"
+              },
+              "primaryLanguage": null
+            },
+            {
+              "nameWithOwner": "black-arm/black-arm-cv",
+              "description": "My web site",
+              "forkCount": 0,
+              "homepageUrl": null,
+              "url": "https://github.com/black-arm/black-arm-cv",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/68558867?u=96daf7d66a10e74dba02785bba55e0f6352bc73e&v=4"
+              },
+              "primaryLanguage": {
+                "color": "#3178c6",
+                "name": "TypeScript"
+              }
+            }
+          ]
+        },
+        "repositoriesContributedTo": {
+          "nodes": [
+            {
+              "nameWithOwner": "firstcontributions/first-contributions",
+              "description": "🚀✨ Help beginners to contribute to open source projects",
+              "forkCount": 66715,
+              "homepageUrl": "https://firstcontributions.github.io",
+              "url": "https://github.com/firstcontributions/first-contributions",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/37713493?v=4"
+              },
+              "primaryLanguage": null
+            },
+            {
+              "nameWithOwner": "nextauthjs/next-auth",
+              "description": "Authentication for the Web.",
+              "forkCount": 2351,
+              "homepageUrl": "https://authjs.dev",
+              "url": "https://github.com/nextauthjs/next-auth",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/67470890?v=4"
+              },
+              "primaryLanguage": {
+                "color": "#3178c6",
+                "name": "TypeScript"
+              }
+            },
+            {
+              "nameWithOwner": "Balastrong/github-stats",
+              "description": "Aggregating and displaying YOUR GitHub Stats in meaningful metrics (we learn web development in the meantime)",
+              "forkCount": 27,
+              "homepageUrl": "https://public-github-stats.vercel.app",
+              "url": "https://github.com/Balastrong/github-stats",
+              "owner": {
+                "avatarUrl": "https://avatars.githubusercontent.com/u/7253929?v=4"
+              },
+              "primaryLanguage": {
+                "color": "#3178c6",
+                "name": "TypeScript"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
