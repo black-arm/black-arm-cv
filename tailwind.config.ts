@@ -7,6 +7,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 
+  theme: {
+    extend: {
+      listStyleImage: {
+        star: 'url("/images/start.png")',
+      }
+    }
+  },
   daisyui: {
     themes: [{
       dark: {
