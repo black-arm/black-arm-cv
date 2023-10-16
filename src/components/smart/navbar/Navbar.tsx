@@ -87,9 +87,8 @@ function setTheme(theme: 'light' | 'dark'){
 }
 
 function Menu({ className }: { className: string }){
-    return <ul className={className}>
-    <li><Link data-testid="homepageLink" href='/'>Home</Link></li>
-    <li><Link data-testid="projectsLink" href="/projects">Progetti</Link></li>
-    <li><a>Articoli</a></li>
-</ul>;
+    return <ul tabIndex={0} className={className}>
+        <li><Link data-testid="homepageLink" href='/'>Home</Link></li>
+        <li><Link data-testid="projectsLink" href="/projects">Progetti</Link></li>
+    </ul>;
 }
