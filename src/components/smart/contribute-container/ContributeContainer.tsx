@@ -7,10 +7,8 @@ export function ContributeContainer() {
     
     const data = useContext(ProjectContext);
 
-    return <div>
-        <h3>Contributi</h3>
-        <HocCard>
+    return <HocCard>
             { data.repositoriesContributedTo.map((repository, index) => <RepositoryCard key={index} {... repository} />)}
-        </HocCard>
-    </div>;
+        </HocCard>;
+
 }

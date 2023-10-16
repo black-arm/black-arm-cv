@@ -7,10 +7,7 @@ export function RepositoryContainer() {
     
     const data = useContext(ProjectContext);
 
-    return <div>
-    <h3>Progetti</h3>
-    <HocCard>
-        { data.repositories.map((repository, index) => <RepositoryCard key={index} {... repository} />)}
-    </HocCard>
-    </div>;
+    return <HocCard>
+            { data.repositories.map((repository, index) => <RepositoryCard key={index} {... repository} />)}
+        </HocCard>;
 }

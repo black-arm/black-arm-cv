@@ -21,7 +21,15 @@ export default function ProjectsPage() {
 
     return <ProjectContext.Provider value={data}>
         <div className="flex flex-col p-3">
+            <div className="text-center p-5 my-4">
+                <h3 data-testid="projectTitle" className="text-5xl mb-2">Progetti</h3>
+                <p data-testid="projectSubTitle" className="text-xl">I miei recenti progetti</p>
+            </div>
             <RepositoryContainer />
+            <div className="text-center p-5 my-4">
+                <h3 data-testid="contributionTitle" className="text-5xl mb-2">Contributi</h3>
+                <p data-testid="contributionSubTitle" className="text-xl">I miei recenti Contributi</p>
+            </div>
             <ContributeContainer />
         </div>
     </ProjectContext.Provider>;

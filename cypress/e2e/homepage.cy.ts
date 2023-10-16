@@ -13,7 +13,12 @@ describe('template spec', () => {
     cy.get('[data-testid="profileImage"]')
       .should('exist')
       .and('have.attr', 'src');
-      //.should('have.a.property', 'src', '/images/profile.jpeg');
+  });
+
+  it('should view projects page', () => {
+    cy.visit('http://localhost:3000');
+    cy.get('[data-testid="projectsLink"]').eq(0).click();
+    cy.url().should('include', '/projects');
   });
 
 });

@@ -6,7 +6,7 @@ describe('Projects page', () => {
     });
     
     it('should view Titles', () => {
-        cy.get('[data-testid="projectTitle"]').contains('I Miei Progetti');
+        cy.get('[data-testid="projectTitle"]').contains('Progetti');
         cy.get('[data-testid="contributionTitle"]').contains('Contributi');
     });
     
@@ -16,8 +16,15 @@ describe('Projects page', () => {
 
         cy.wait('@userRepository');
 
-        cy.get('[data-testid="repoCard"]').should('hava.length', 8);
+        cy.get('[data-testid="repoCard"]').should('have.length', 8);
         
+    });
+
+    it('should visit homepage', () => {
+        cy.intercept('https://api.github.com/graphql', { fixture: 'users.json'}).as('userRepository');
+
+        cy.get('[data-testid="homepageLink"]').eq(0).click();
+        cy.url().should('eq', 'http://localhost:3000/');
     });
 
 });

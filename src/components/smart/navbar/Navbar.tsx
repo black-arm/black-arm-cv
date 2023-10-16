@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -26,11 +27,7 @@ export function Navbar() {
             <a className="btn btn-ghost">Antonio Basile</a>
         </div>
         <div className="navbar-center">
-            <ul className="sm:menu sm:menu-horizontal hidden px-2">
-                <li><a>Home</a></li>
-                <li><a>Progetti</a></li>
-                <li><a>Articoli</a></li>
-            </ul>
+            <Menu className="sm:menu sm:menu-horizontal hidden px-2" />
         </div>
         <div className="navbar-end">
            <button id="darkModeButton"
@@ -46,11 +43,7 @@ export function Navbar() {
                     { menuIcon }
                 </label>
                 <div className="dropdown-content card card-compact w-screen z-10 bg-base-200">
-                    <ul tabIndex={0} className="menu menu-xl">
-                        <li className="p-2"><a>Home</a></li>
-                        <li className="p-2"><a>Progetti</a></li>
-                        <li className="p-2"><a>Articoli</a></li>
-                    </ul>
+                    <Menu className="menu menu-xl" />
                 </div>
            </div>
         </div>
@@ -91,4 +84,12 @@ const menuIcon = <svg xmlns="http://www.w3.org/2000/svg"
 function setTheme(theme: 'light' | 'dark'){
     document.documentElement.dataset.theme = theme;
     localStorage.theme = theme;
+}
+
+function Menu({ className }: { className: string }){
+    return <ul className={className}>
+    <li><Link data-testid="homepageLink" href='/'>Home</Link></li>
+    <li><Link data-testid="projectsLink" href="/projects">Progetti</Link></li>
+    <li><a>Articoli</a></li>
+</ul>;
 }
