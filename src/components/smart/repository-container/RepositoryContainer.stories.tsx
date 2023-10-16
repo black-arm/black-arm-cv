@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { RepositoryContainer } from "./RepositoryContainer";
 import { Repository } from "@/models";
-import { ProjectContext } from "../../../app/projects/page";
+import { ProjectContext } from "@/contexts/project-context";
 
 const meta: Meta<typeof RepositoryContainer> = {
     component: RepositoryContainer

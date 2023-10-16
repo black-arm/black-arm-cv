@@ -1,4 +1,4 @@
-import { ProjectContext } from "@/app/projects/page";
+import { ProjectContext } from "@/contexts/project-context";
 import { RepositoryCard } from "@/components/dump/repository-card/RepositoryCard";
 import { useContext } from "react";
 
