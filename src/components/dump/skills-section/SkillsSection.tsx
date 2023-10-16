@@ -12,15 +12,15 @@ export function SkillsSection() {
             <div className="hero-content flex-col lg:flex-row">
                 <Flip direction="horizontal" duration={2000}>
                     <div className="w-full p-3">
-                        <h1 className="text-6xl text-center">{ title }</h1>
-                        <ul className="list-disc text-3xl">
+                        <h1 className="text-3xl lg:text-6xl font-bold">{ title }</h1>
+                        <ul className="list-disc text-xl lg:text-3xl">
                             { skillsText.map((skillText, index) => <li key={index} >{ skillText }</li>)}
                         </ul>
                     </div>
                 </Flip>
                 <Fade direction="right" duration={2000}>
                     <div className="w-full">
-                        <h1 className="text-6xl text-center">Tecnologie</h1>
+                        <h1 className="lg:text-6xl text-3xl text-center font-bold">Tecnologie</h1>
                         <ul className="list-none text-center">
                             { techIcons.map((techIcon, index) => <li  key={index} 
                                 className="inline-block text-center hover:text-primary hover:fill-primary p-2"

@@ -11,7 +11,7 @@ export function ExperiencesSection() {
 
     return<>
         <div className="col-span-full">
-            <h1 className="text-5xl text-center font-bold m-3">Esperienze Lavorative</h1>
+            <h1 className="lg:text-6xl text-3xl text-center font-bold my-5">Esperienze Lavorative</h1>
         </div>
         <Fade cascade damping={0.3} className="h-full">{ experiences.map(
             (experience, index) => <Card key={index} {...experience} />
