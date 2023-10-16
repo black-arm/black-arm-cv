@@ -1,4 +1,19 @@
-import { angularIcon, css3Icon, cypressJsIcon, gitIcon, html5Icon, javaIcon, javascriptIcon, nextJsIcon, ngRx, npmIcon, reactIcon, reduxIcon, typescriptIcon } from "../components/globals/icons";
+import { angularIcon, 
+    css3Icon, 
+    cypressJsIcon, 
+    gitIcon, 
+    githubIcon, 
+    html5Icon, 
+    javaIcon, 
+    javascriptIcon, 
+    linkedinIcon, 
+    nextJsIcon, 
+    ngRx, 
+    npmIcon, 
+    reactIcon, 
+    reduxIcon, 
+    typescriptIcon 
+} from "../components/globals/icons";
 import { Portfolio } from "@/models";
 
 export const devPortfolio: Portfolio = {
@@ -87,6 +102,16 @@ export const devPortfolio: Portfolio = {
             title: "HRM Informatica",
             info: "Consulenza in un azienda che lavora nel settore energetico. Ho lavorato su molteplici progetti principalmente con Java e Spring Framework", 
             image: "/images/hrm.jpeg"
+        }
+    ],
+    footerLink: [
+        {
+            link: 'https://github.com/black-arm',
+            icon: githubIcon
+        },
+        {
+            link: 'https://www.linkedin.com/in/antonio-basile-46a279114/',
+            icon: linkedinIcon
         }
     ]
 };

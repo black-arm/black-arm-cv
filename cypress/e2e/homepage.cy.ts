@@ -20,5 +20,22 @@ describe('template spec', () => {
     cy.get('[data-testid="projectsLink"]').eq(0).click();
     cy.url().should('include', '/projects');
   });
+  
+  it("Should open another tab with a different domain URL on click", () => {
+
+    cy.visit("http://localhost:3000");
+    cy.get('[data-testid="externalLink"]')
+    .find("a").eq(0)
+    .invoke('removeAttr', 'target')
+    .click();
+
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(2000);
+
+    cy.origin('https://github.com', () => {
+      cy.url().should('include', 'black-arm');
+    });
+  });
+  
 
 });
