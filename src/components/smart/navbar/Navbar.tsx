@@ -42,7 +42,7 @@ export function Navbar() {
                 <label tabIndex={0} className="btn btn-ghost btn-circle" >
                     { menuIcon }
                 </label>
-                <div className="dropdown-content card card-compact w-screen z-10 bg-base-200">
+                <div className="dropdown-content card card-compact w-screen z-10 bg-base-300 mt-1">
                     <Menu className="menu menu-xl" />
                 </div>
            </div>
@@ -87,9 +87,8 @@ function setTheme(theme: 'light' | 'dark'){
 }
 
 function Menu({ className }: { className: string }){
-    return <ul className={className}>
-    <li><Link data-testid="homepageLink" href='/'>Home</Link></li>
-    <li><Link data-testid="projectsLink" href="/projects">Progetti</Link></li>
-    <li><a>Articoli</a></li>
-</ul>;
+    return <ul tabIndex={0} className={className}>
+        <li><Link data-testid="homepageLink" href='/'>Home</Link></li>
+        <li><Link data-testid="projectsLink" href="/projects">Progetti</Link></li>
+    </ul>;
 }

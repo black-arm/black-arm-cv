@@ -24,7 +24,7 @@ export const devPortfolio: Portfolio = {
     },
     skills: {
         title: "Cosa Faccio",
-        skillsText: ["Sviluppare applicazioni frontend performanti per il web", "Creazione di applicazioni scalabili e mantenibili"],
+        skillsText: ["Sviluppare applicazioni frontend performanti", "Creazione di applicazioni scalabili e mantenibili", "Utilizzo di un approccio TDD nello sviluppo"],
         techIcons: [
             {
                 iconName: 'HTML',
