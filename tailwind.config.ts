@@ -17,7 +17,7 @@ const config: Config = {
   daisyui: {
     themes: [{
       dark: {
-        "primary": "#02d140",
+        "primary": "#0ea5e9",
         "secondary": "#c64d4f",
         "accent": "#3e9ba0",
         "neutral": "#1a1726",
@@ -33,18 +33,15 @@ const config: Config = {
     },
     {
       light: {
-        "primary": "#eac220",
-        "secondary": "#db6f41",
-        "accent": "#8fbcea",
-        "neutral": "#2c2a3c",
-        "base-100": "#e2e6e9",
-        "base-200": "#B0B3B6",
-        "base-300": "#808386",
-        "info": "#83b0e7",
-        "success": "#15753a",
-        "warning": "#ad5e10",
-        "error": "#f22c40",
-        "accent-content": "#000"
+        "primary": "#0ea5e9",
+        "secondary": "#dc2626",
+        "accent": "#1dcdbc",
+        "neutral": "#2b3440",
+        "base-100": "#ffffff",
+        "info": "#3abff8",
+        "success": "#36d399",
+        "warning": "#fbbd23",           
+        "error": "#f87272",
       }
     } 
   ]

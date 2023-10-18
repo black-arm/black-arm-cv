@@ -19,12 +19,18 @@ import { Portfolio } from "@/models";
 export const devPortfolio: Portfolio = {
     userInfo: {
         title: "Hello World! Mi chiamo Antonio",
-        info: "Sono uno sviluppatore software! Ho mosso i miei primi passi con JAVA e Spring Boot ma adesso lavoro con Javascript, Typescript, Angular, React, next.js e altre fantastiche librerie e frameworks.",
+        info: `Sono un professionista nel campo dello sviluppo software. Ho acquisito le mie competenze lavorando prima utilizzando Java e in seguito Javascript. 
+            Tuttavia, al giorno d'oggi, mi occupo principalmente di sviluppo utilizzando tecnologie come Javascript, Typescript, Angular, React, Next.js e 
+            altre librerie e framework.`,
         image: "/images/profile.jpeg"
     },
     skills: {
-        title: "Cosa Faccio",
-        skillsText: ["Sviluppare applicazioni frontend performanti", "Creazione di applicazioni scalabili e mantenibili", "Utilizzo di un approccio TDD nello sviluppo"],
+        title: "Competenze",
+        skillsText: [
+            "Sviluppo di applicazioni frontend altamente performanti.", 
+            "Progettazione e sviluppo di applicazioni scalabili e facilmente manutenibili.", 
+            "Applicazione di un approccio Test-Driven Development (TDD) durante il ciclo di sviluppo."
+        ],
         techIcons: [
             {
                 iconName: 'HTML',
@@ -83,24 +89,27 @@ export const devPortfolio: Portfolio = {
     experiences: [
         {
             title: "Be Gear srl",
-            info: `Consulenza in un'azienda internazionale e mi sono occupato principalmente di 
-                sviluppo frontend con tecnologie come Angular, NgRx, React, Next.js`, 
+            info: `Consulente in un'azienda internazionale, ho focalizzato gran parte del
+             mio lavoro sullo sviluppo frontend, utilizzando tecnologie avanzate come Angular, NgRx, React e Next.js.`, 
             image: "/images/begear.png"
         },
         {
             title: "Fides srl",
-            info: `Consulenza in un azienda Finance/Assicurativo, e mi sono occupato di sviluppo frontend usando Angular e NgRx`, 
+            info: `Consulenza in un'azienda del settore finanziario e assicurativo, 
+                con esperienza predominante nello sviluppo frontend utilizzando le tecnologie Angular e NgRx.`, 
             image: "/images/fides.jpeg"
         },
         {
             title: "Amaris Consulting srl",
-            info: `Consulenza in un azienda in ambito banking. Qui ho lavorato su molteplici progetti e 
-                mi sono occupato di creare Batch in Java, sviluppi frontend con React e creazione di Rest API con Spring Boot`, 
+            info: `Consulenza presso una prestigiosa azienda del settore bancario, con un ricco background in cui
+                 ho gestito una serie di progetti. Le mie responsabilità includevano lo sviluppo di batch in Java, 
+                 la realizzazione di soluzioni frontend utilizzando React e la creazione di efficaci API REST con Spring Boot.`, 
             image: "/images/amaris.jpeg"
         },
         {
             title: "HRM Informatica",
-            info: "Consulenza in un azienda che lavora nel settore energetico. Ho lavorato su molteplici progetti principalmente con Java e Spring Framework", 
+            info: `Consulenza presso un'importante azienda operante nel settore energetico, con un focus 
+                principale su una varietà di progetti che hanno richiesto competenze avanzate nell'uso di Java e del framework Spring.`, 
             image: "/images/hrm.jpeg"
         }
     ],
