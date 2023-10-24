@@ -1,5 +1,3 @@
-'use client';
-
 import { devPortfolio } from "../../../config/portfolio";
 import { Fade } from "react-awesome-reveal";
 
