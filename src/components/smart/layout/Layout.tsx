@@ -1,5 +1,4 @@
 import { Navbar } from '@/components/smart/navbar/Navbar';
-import '../../../globals.css';
 import { Footer } from '@/components/smart/footer/Footer';
 import Head from 'next/head';
 import { usePortfolioTitle } from '../../../hooks';

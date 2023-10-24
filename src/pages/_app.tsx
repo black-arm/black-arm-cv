@@ -1,5 +1,5 @@
 
-import '../globals.css';
+import '@/styles/globals.css';
 import { Layout } from '@/components/smart/layout/Layout';
 import { AppProps } from 'next/app';
 
