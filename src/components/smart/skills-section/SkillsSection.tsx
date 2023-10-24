@@ -1,9 +1,9 @@
-import { devPortfolio } from "../../../config/portfolio";
+import { useSkills } from "@/hooks";
 import { Fade } from "react-awesome-reveal";
 
 export function SkillsSection() {
 
-    const { title, techIcons, skillsText } = devPortfolio.skills;
+    const { title, techIcons, skillsText } = useSkills();
 
     return <>
         <div className="hero min-h-screen bg-base-200">

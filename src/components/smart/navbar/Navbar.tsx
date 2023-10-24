@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { devPortfolio } from "@/config/portfolio";
+import { usePortfolioTitle } from "../../../hooks";
 
 export function Navbar() {
 
     const [isDarkMode, setDarkMode] = useState(false);
+    const title = usePortfolioTitle();
 
     useEffect(() => {
         initTheme();
@@ -25,7 +26,7 @@ export function Navbar() {
 
     return <div data-testid="navbar" className="navbar bg-base-300 sticky top-0 z-10">
         <div className="navbar-start">
-            <a className="btn btn-ghost">{ devPortfolio.title }</a>
+            <a className="btn btn-ghost">{ title }</a>
         </div>
         <div className="navbar-center">
             <Menu className="sm:menu sm:menu-horizontal hidden px-2" />

@@ -1,13 +1,11 @@
-'use client';
-
-import { devPortfolio } from "../../../config/portfolio";
 import { Info } from "@/models";
-import { Card } from "../card/Card";
+import { Card } from "../../dump/card/Card";
 import { Fade } from "react-awesome-reveal";
+import { useExperiences } from "@/hooks";
 
 export function ExperiencesSection() {
     
-    const experiences: Info[] = devPortfolio.experiences;
+    const experiences: Info[] = useExperiences();
 
     return<>
         <div className="col-span-full">

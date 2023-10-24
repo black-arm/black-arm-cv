@@ -1,8 +1,8 @@
-import { Navbar } from '@/components/dump/navbar/Navbar';
+import { Navbar } from '@/components/smart/navbar/Navbar';
 import '../../../globals.css';
-import { Footer } from '@/components/dump/footer/Footer';
+import { Footer } from '@/components/smart/footer/Footer';
 import Head from 'next/head';
-import { devPortfolio } from '@/config/portfolio';
+import { usePortfolioTitle } from '../../../hooks';
 
 export function Layout({
   children,
@@ -10,9 +10,11 @@ export function Layout({
   children: React.ReactNode;
 }) {
 
+  const title = usePortfolioTitle();
+
   return <>
     <Head>
-      <title>{ devPortfolio.title }</title>
+      <title>{ title }</title>
       <link rel="icon" href="/images/favicon.ico"></link>
     </Head>
     <Navbar />
