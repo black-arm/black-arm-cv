@@ -25,7 +25,7 @@ export function Navbar() {
 
     return <div data-testid="navbar" className="navbar bg-base-300 sticky top-0 z-10">
         <div className="navbar-start">
-            <a className="btn btn-ghost">{ devPortfolio.navbarTitle }</a>
+            <a className="btn btn-ghost">{ devPortfolio.title }</a>
         </div>
         <div className="navbar-center">
             <Menu className="sm:menu sm:menu-horizontal hidden px-2" />
