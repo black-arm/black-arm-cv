@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { devPortfolio } from "@/config/portfolio";
 
 export function Navbar() {
 
@@ -24,7 +25,7 @@ export function Navbar() {
 
     return <div data-testid="navbar" className="navbar bg-base-300 sticky top-0 z-10">
         <div className="navbar-start">
-            <a className="btn btn-ghost">Antonio Basile</a>
+            <a className="btn btn-ghost">{ devPortfolio.navbarTitle }</a>
         </div>
         <div className="navbar-center">
             <Menu className="sm:menu sm:menu-horizontal hidden px-2" />

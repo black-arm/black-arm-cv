@@ -17,6 +17,7 @@ import { angularIcon,
 import { Portfolio } from "@/models";
 
 export const devPortfolio: Portfolio = {
+    navbarTitle: 'Antonio Basile',
     userInfo: {
         title: "Hello World! Mi chiamo Antonio",
         info: `Sono un professionista nel campo dello sviluppo software. Ho acquisito le mie competenze lavorando prima utilizzando Java e in seguito Javascript. 
