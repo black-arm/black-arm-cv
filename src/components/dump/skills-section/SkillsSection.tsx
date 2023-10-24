@@ -11,8 +11,8 @@ export function SkillsSection() {
                 <Fade direction="left" duration={2000}>
                     <div className="w-full p-3">
                         <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-center">{ title }</h1>
-                        <ul className="list-disc text-xl lg:text-3xl">
-                            { skillsText.map((skillText, index) => <li key={index} >{ skillText }</li>)}
+                        <ul className="list-star text-xl lg:text-3xl">
+                            { skillsText.map((skillText, index) => <li className="pl-5" key={index} >{ skillText }</li>)}
                         </ul>
                     </div>
                 </Fade>

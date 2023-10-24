@@ -9,8 +9,8 @@ const config: Config = {
 
   theme: {
     extend: {
-      listStyleImage: {
-        star: 'url("/images/start.png")',
+      listStyleType: {
+        star: '"\\1F4BB"',
       }
     }
   },
