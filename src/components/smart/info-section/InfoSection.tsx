@@ -1,11 +1,9 @@
-'use client';
-
-import { devPortfolio } from "../../../config/portfolio";
+import { useUserInfo } from "@/hooks";
 import { Fade } from "react-awesome-reveal";
 
 export function InfoSection(){
 
-    const { title, info, image } = devPortfolio.userInfo;
+    const { title, info, image } = useUserInfo();
 
     return <div className="hero min-h-screen">
     <div className="hero-content flex-col lg:flex-row-reverse">

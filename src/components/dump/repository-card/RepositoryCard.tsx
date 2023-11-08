@@ -1,7 +1,6 @@
 import { Repository } from "@/models";
 import Image from "next/image";
 
-
 export const RepositoryCard = ({
     nameWithOwner, 
     description, 

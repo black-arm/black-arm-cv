@@ -1,19 +1,13 @@
-'use client';
-
 import { ContributeContainer } from "@/components/smart/contribute-container/ContributeContainer";
 import { RepositoryContainer } from "@/components/smart/repository-container/RepositoryContainer";
 import { ProjectContext } from "@/contexts/project-context";
-import { useGithubRepositories } from "@/hooks/useGithubRepositories";
+import { fetchUserRepositories } from "@/fetch/fetchUserRepositories";
+import { UserRepositories } from "@/models/github-models";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-export default function ProjectsPage() {
-    
-    const {data, isLoading} = useGithubRepositories();
-    
-    if(isLoading){
-        return <div>is Loading...</div>;
-    }
+export default function ProjectsPage(props : InferGetServerSidePropsType<typeof getServerSideProps>) {
 
-    return <ProjectContext.Provider value={data}>
+    return <ProjectContext.Provider value={props}>
         <div className="text-center p-5 my-4 col-span-full">
             <h3 data-testid="projectTitle" className="lg:text-6xl text-3xl font-bold mb-2">Progetti</h3>
             <p data-testid="projectSubTitle" className="lg:text-xl text-md">I miei recenti progetti</p>
@@ -26,3 +20,10 @@ export default function ProjectsPage() {
         <ContributeContainer />
     </ProjectContext.Provider>;
 }
+
+export const getServerSideProps = (async () => {
+    
+    const userRepo = await fetchUserRepositories();
+    return { props:  userRepo  };
+
+}) satisfies GetServerSideProps<UserRepositories>;

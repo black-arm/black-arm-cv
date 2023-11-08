@@ -1,6 +1,6 @@
 import Link from 'next/link';
  
-export default function NotFound() {
+export default function Custom404() {
   return (
     <div className="text-center py-52 col-span-full py-auto" >
             <h2 className="text-3xl lg:text-7xl mb-10">404: Pagina non trovata...</h2>
