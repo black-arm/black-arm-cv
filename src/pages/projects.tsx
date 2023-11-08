@@ -3,9 +3,9 @@ import { RepositoryContainer } from "@/components/smart/repository-container/Rep
 import { ProjectContext } from "@/contexts/project-context";
 import { fetchUserRepositories } from "@/fetch/fetchUserRepositories";
 import { UserRepositories } from "@/models/github-models";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-export default function ProjectsPage(props : InferGetStaticPropsType<typeof getStaticProps>) {
+export default function ProjectsPage(props : InferGetServerSidePropsType<typeof getServerSideProps>) {
 
     return <ProjectContext.Provider value={props}>
         <div className="text-center p-5 my-4 col-span-full">
@@ -21,9 +21,9 @@ export default function ProjectsPage(props : InferGetStaticPropsType<typeof getS
     </ProjectContext.Provider>;
 }
 
-export const getStaticProps = (async () => {
+export const getServerSideProps = (async () => {
     
     const userRepo = await fetchUserRepositories();
     return { props:  userRepo  };
 
-}) satisfies GetStaticProps<UserRepositories>;
+}) satisfies GetServerSideProps<UserRepositories>;
