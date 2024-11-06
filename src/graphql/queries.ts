@@ -34,6 +34,7 @@ export const projectsQuery = `query($login: String!){
                 description,
                 forkCount,
                 homepageUrl,
+                stargazerCount,
                 url,
                 owner {
                     avatarUrl
@@ -51,6 +52,7 @@ export const projectsQuery = `query($login: String!){
                 forkCount,
                 homepageUrl,
                 url,
+                stargazerCount,
                 owner {
                     avatarUrl
                 },

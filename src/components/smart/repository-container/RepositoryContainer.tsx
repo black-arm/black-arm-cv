@@ -1,10 +1,7 @@
-import { ProjectContext } from "@/contexts/project-context";
 import { RepositoryCard } from "@/components/dump/repository-card/RepositoryCard";
-import { useContext } from "react";
+import { UserRepositories } from "@/models/github-models";
 
-export function RepositoryContainer() {
-    
-    const data = useContext(ProjectContext);
+export function RepositoryContainer({data}: { data: UserRepositories }) {
 
     return <>{ data.repositories.map((repository, index) => <RepositoryCard key={index} {... repository} />)}</>;
 }

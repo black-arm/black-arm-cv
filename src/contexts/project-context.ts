@@ -1,3 +1,5 @@
+'use client';
+
 import { UserRepositories } from "@/models/github-models";
 import { createContext } from "react";
 

@@ -13,7 +13,7 @@ type Story = StoryObj<typeof RepositoryCard>;
 const repository: Repository = {
     "nameWithOwner": "nextauthjs/next-auth",
     "description": "Authentication for the Web.",
-    "forkCount": 2351,
+    "stargazerCount": 2351,
     "homepageUrl": "https://authjs.dev",
     "url": "https://github.com/nextauthjs/next-auth",
     "owner": {
