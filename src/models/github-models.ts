@@ -7,7 +7,7 @@ export interface UserRepositories {
 export interface Repository {
     nameWithOwner: string
     description: string | null,
-    forkCount: number,
+    stargazerCount: number,
     homepageUrl: string | null,
     url: string,
     owner: Owner,

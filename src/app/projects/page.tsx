@@ -1,29 +1,26 @@
 import { ContributeContainer } from "@/components/smart/contribute-container/ContributeContainer";
 import { RepositoryContainer } from "@/components/smart/repository-container/RepositoryContainer";
-import { ProjectContext } from "@/contexts/project-context";
 import { fetchUserRepositories } from "@/fetch/fetchUserRepositories";
 import { UserRepositories } from "@/models/github-models";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-export default function ProjectsPage(props : InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default async function ProjectsPage() {
 
-    return <ProjectContext.Provider value={props}>
+    const userRepo = await getUserRepo();
+
+    return <>
         <div className="text-center p-5 my-4 col-span-full">
             <h3 data-testid="projectTitle" className="lg:text-6xl text-3xl font-bold mb-2">Progetti</h3>
             <p data-testid="projectSubTitle" className="lg:text-xl text-md">I miei recenti progetti</p>
         </div>
-        <RepositoryContainer />
+        <RepositoryContainer data={userRepo} />
         <div className="text-center p-5 my-4 col-span-full">
             <h3 data-testid="contributionTitle" className="lg:text-6xl text-3xl font-bold mb-2">Contributi</h3>
             <p data-testid="contributionSubTitle" className="lg:text-xl text-md">I miei recenti Contributi</p>
         </div>
-        <ContributeContainer />
-    </ProjectContext.Provider>;
+        <ContributeContainer data={userRepo} />
+    </>;
 }
 
-export const getServerSideProps = (async () => {
-    
-    const userRepo = await fetchUserRepositories();
-    return { props:  userRepo  };
-
-}) satisfies GetServerSideProps<UserRepositories>;
+export const getUserRepo = (async (): Promise<UserRepositories> => {
+    return await fetchUserRepositories();
+});
