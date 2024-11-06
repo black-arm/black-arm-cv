@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { RepositoryContainer } from "./RepositoryContainer";
 import { Repository } from "@/models";
-import { ProjectContext } from "@/contexts/project-context";
 
 const meta: Meta<typeof RepositoryContainer> = {
     component: RepositoryContainer
@@ -14,7 +13,7 @@ type Story = StoryObj<typeof RepositoryContainer>;
 const repository: Repository = {
     "nameWithOwner": "nextauthjs/next-auth",
     "description": "Authentication for the Web.",
-    "forkCount": 2351,
+    "stargazerCount": 2351,
     "homepageUrl": "https://authjs.dev",
     "url": "https://github.com/nextauthjs/next-auth",
     "owner": {
@@ -27,7 +26,5 @@ const repository: Repository = {
 };
 
 export const Render: Story = {
-    render: () => <ProjectContext.Provider value={{ repositories: [repository, repository, repository], repositoriesContributedTo: [] }}>
-            <RepositoryContainer />
-        </ProjectContext.Provider>
+    render: () => <RepositoryContainer data={{ repositories: [repository, repository, repository], repositoriesContributedTo: [] }} />
 };

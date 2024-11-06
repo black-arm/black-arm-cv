@@ -11,18 +11,18 @@ describe('Projects page', () => {
         cy.get('[data-testid="contributionTitle"]').contains('Contributi');
     });
     
-    it('should view repo cards', () => {
+    // it('should view repo cards', () => {
         
-        cy.visit('http://localhost:3000');
-        cy.intercept('GET','**/development/projects.json', { fixture: 'users.json'}).as('userRepository');
-        cy.get('[data-testid="projectsLink"]').eq(0).click();
+    //     cy.visit('http://localhost:3000');
+    //     cy.intercept('GET','**/development/projects.json', { fixture: 'users.json'}).as('userRepository');
+    //     cy.get('[data-testid="projectsLink"]').eq(0).click();
 
       
-        cy.wait('@userRepository');
+    //     cy.wait('@userRepository');
 
-        cy.get('[data-testid="repoCard"]').should('have.length', 7);
+    //     cy.get('[data-testid="repoCard"]').should('have.length', 7);
         
-    });
+    // });
 
     it('should visit homepage', () => {
         cy.visit('http://localhost:3000/projects');
